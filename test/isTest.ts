@@ -1,3 +1,5 @@
+/// <reference types="mocha" />
+/// <reference types="node" />
 import assert from 'assert';
 import isHex from '../src/is/isHex';
 import isHexa from '../src/is/isHexa';
@@ -5,8 +7,12 @@ import isRgb from '../src/is/isRgb';
 import isRgba from '../src/is/isRgba';
 import isHsl from '../src/is/isHsl';
 import isHsla from '../src/is/isHsla';
+import isHsv from '../src/is/isHsv';
+import isHsva from '../src/is/isHsva';
 import isColor from '../src/is/isColor';
 import isValidator from '../src/is/isValidator';
+import isLight from '../src/is/isLight';
+import isDark from '../src/is/isDark';
 
 describe('isHex', function () {
   it(`isHex('#000')`, () => {
@@ -176,30 +182,6 @@ describe('isHsla', function () {
   });
 });
 
-describe('isColor', function () {
-  it(`isColor('#000')`, () => {
-    assert.strictEqual(isColor('#000'), true);
-  });
-  it(`isColor('rgb(0,0,0)')`, () => {
-    assert.strictEqual(isColor('rgb(0,0,0)'), true);
-  });
-  it(`isColor('rgba(0,0,0,1)')`, () => {
-    assert.strictEqual(isColor('rgba(0,0,0,1)'), true);
-  });
-  it(`isColor('HSL(0,0%,0%)')`, () => {
-    assert.strictEqual(isColor('HSL(0,0%,0%)'), true);
-  });
-  it(`isColor('HSLa(0,0%,0%)')`, () => {
-    assert.strictEqual(isColor('HSLa(0,0%,0%,0.1)'), true);
-  });
-  it(`isColor('red')`, () => {
-    assert.strictEqual(isColor('red'), true);
-  });
-  it(`isColor('wwwww')`, () => {
-    assert.strictEqual(isColor('wwwww'), false);
-  });
-});
-
 describe('isValidator', function () {
   it(`isValidator('#000')`, () => {
     assert.strictEqual(isValidator('#000'), 'hex');
@@ -216,7 +198,130 @@ describe('isValidator', function () {
   it(`isValidator('HSLa(0,0%,0%)')`, () => {
     assert.strictEqual(isValidator('HSLa(0,0%,0%,0.1)'), 'hsla');
   });
+  it(`isValidator('HSV(0,0%,0%)')`, () => {
+    assert.strictEqual(isValidator('HSV(0,0%,0%)'), 'hsv');
+  });
+  it(`isValidator('HSVa(0,0%,0%,0.1)')`, () => {
+    assert.strictEqual(isValidator('HSVa(0,0%,0%,0.1)'), 'hsva');
+  });
   it(`isValidator('red')`, () => {
     assert.strictEqual(isValidator('red'), '#ff0000');
+  });
+});
+
+describe('isHsv', function () {
+  it(`isHsv('HSV(0,0%,0%)')`, function () {
+    assert.strictEqual(isHsv('HSV(0,0%,0%)'), true);
+  });
+  it(`isHsv('hsv(1,2%,3%)')`, function () {
+    assert.strictEqual(isHsv('hsv(1,2%,3%)'), true);
+  });
+  it(`isHsv('hsv(1 2% 3%)')`, function () {
+    assert.strictEqual(isHsv('hsv(1 2% 3%)'), true);
+  });
+  it(`isHsv('hsv(1 , 2%, 3% )')`, function () {
+    assert.strictEqual(isHsv('hsv(1 , 2%, 3% )'), true);
+  });
+  it(`isHsv('hsv(400,2%,3%)')`, function () {
+    assert.strictEqual(isHsv('hsv(400,2%,3%)'), false);
+  });
+  it(`isHsv('hsv(ss,2%,3%)')`, function () {
+    assert.strictEqual(isHsv('hsv(ss,2%,3%)'), false);
+  });
+  it(`isHsv('hsv(2,2%,3%)s')`, function () {
+    assert.strictEqual(isHsv('hsv(2,2%,3%)s'), false);
+  });
+  it(`isHsv('hsv(100,200%,3%)')`, function () {
+    assert.strictEqual(isHsv('hsv(100,200%,3%)'), false);
+  });
+});
+
+describe('isHsva', function () {
+  it(`isHsva('HSVa(0,0%,0%,0.1)')`, function () {
+    assert.strictEqual(isHsva('HSVa(0,0%,0%,0.1)'), true);
+  });
+  it(`isHsva('hsva(1,2%,3%,0.1)')`, function () {
+    assert.strictEqual(isHsva('hsva(1,2%,3%,0.1)'), true);
+  });
+  it(`isHsva('hsva(1 , 2%, 3% ,0.1)')`, function () {
+    assert.strictEqual(isHsva('hsva(1 , 2%, 3% ,0.1)'), true);
+  });
+  it(`isHsva('hsva(1 2% 3% / 0.1)')`, function () {
+    assert.strictEqual(isHsva('hsva(1 2% 3% / 0.1)'), true);
+  });
+  it(`isHsva('hsva(400,2%,3%)')`, function () {
+    assert.strictEqual(isHsva('hsva(400,2%,3%,0.1)'), false);
+  });
+  it(`isHsva('hsva(ss,2%,3%)')`, function () {
+    assert.strictEqual(isHsva('hsva(ss,2%,3%,0.1)'), false);
+  });
+  it(`isHsva('hsva(2,2%,3%)s')`, function () {
+    assert.strictEqual(isHsva('hsva(2,2%,3%,0.1)s'), false);
+  });
+  it(`isHsva('hsva(100,200%,3%)')`, function () {
+    assert.strictEqual(isHsva('hsva(100,200%,3%,0.1)'), false);
+  });
+  it(`isHsva('hsva(1 , 2%, 3% ,2)')`, function () {
+    assert.strictEqual(isHsva('hsva(1 , 2%, 3% ,2)'), false);
+  });
+});
+
+describe('isColor', function () {
+  it(`isColor('#000')`, () => {
+    assert.strictEqual(isColor('#000'), true);
+  });
+  it(`isColor('rgb(0,0,0)')`, () => {
+    assert.strictEqual(isColor('rgb(0,0,0)'), true);
+  });
+  it(`isColor('rgba(0,0,0,1)')`, () => {
+    assert.strictEqual(isColor('rgba(0,0,0,1)'), true);
+  });
+  it(`isColor('HSL(0,0%,0%)')`, () => {
+    assert.strictEqual(isColor('HSL(0,0%,0%)'), true);
+  });
+  it(`isColor('HSLa(0,0%,0%,0.1)')`, () => {
+    assert.strictEqual(isColor('HSLa(0,0%,0%,0.1)'), true);
+  });
+  it(`isColor('HSV(0,0%,0%)')`, () => {
+    assert.strictEqual(isColor('HSV(0,0%,0%)'), true);
+  });
+  it(`isColor('HSVa(0,0%,0%,0.1)')`, () => {
+    assert.strictEqual(isColor('HSVa(0,0%,0%,0.1)'), true);
+  });
+  it(`isColor('red')`, () => {
+    assert.strictEqual(isColor('red'), true);
+  });
+  it(`isColor('wwwww')`, () => {
+    assert.strictEqual(isColor('wwwww'), false);
+  });
+});
+
+describe('isLight', function () {
+  it(`isLight('#ffffff')`, () => {
+    assert.strictEqual(isLight('#ffffff'), true);
+  });
+  it(`isLight('#000000')`, () => {
+    assert.strictEqual(isLight('#000000'), false);
+  });
+  it(`isLight('yellow')`, () => {
+    assert.strictEqual(isLight('yellow'), true);
+  });
+  it(`isLight('blue')`, () => {
+    assert.strictEqual(isLight('blue'), false);
+  });
+});
+
+describe('isDark', function () {
+  it(`isDark('#ffffff')`, () => {
+    assert.strictEqual(isDark('#ffffff'), false);
+  });
+  it(`isDark('#000000')`, () => {
+    assert.strictEqual(isDark('#000000'), true);
+  });
+  it(`isDark('yellow')`, () => {
+    assert.strictEqual(isDark('yellow'), false);
+  });
+  it(`isDark('blue')`, () => {
+    assert.strictEqual(isDark('blue'), true);
   });
 });

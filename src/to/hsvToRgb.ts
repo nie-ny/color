@@ -1,0 +1,46 @@
+import type { IHSVA, IRGBA } from '../types/index';
+
+/**
+ * 将 HSV/HSB 转换为 RGB
+ * @param h 色相 0-360
+ * @param s 饱和度 0-100
+ * @param v 明度 0-100
+ * @returns [r, g, b]
+ */
+export default function hsvToRgb(h: number, s: number, v: number): [number, number, number] {
+  s /= 100;
+  v /= 100;
+  const c = v * s;
+  const x = c * (1 - Math.abs(((h / 60) % 2) - 1));
+  const m = v - c;
+  let r = 0, g = 0, b = 0;
+
+  if (0 <= h && h < 60) { r = c; g = x; b = 0; }
+  else if (60 <= h && h < 120) { r = x; g = c; b = 0; }
+  else if (120 <= h && h < 180) { r = 0; g = c; b = x; }
+  else if (180 <= h && h < 240) { r = 0; g = x; b = c; }
+  else if (240 <= h && h < 300) { r = x; g = 0; b = c; }
+  else if (300 <= h && h < 360) { r = c; g = 0; b = x; }
+
+  return [
+    Math.round((r + m) * 255),
+    Math.round((g + m) * 255),
+    Math.round((b + m) * 255)
+  ];
+}
+
+/**
+ * 将 HSVA 对象转换为 RGBA 对象
+ * @param hsva
+ * @returns
+ */
+export function hsvaObjectToRgba(hsva: IHSVA): IRGBA {
+  const [r, g, b] = hsvToRgb(hsva.hue, hsva.saturation, hsva.value);
+  return {
+    red: r,
+    green: g,
+    blue: b,
+    alpha: hsva.alpha,
+    format: hsva.format
+  };
+}

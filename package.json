@@ -14,7 +14,7 @@
     "build:umd": "rollup --config build/rollup.config.umd.js --bundleConfigAsCjs",
     "build:cjs": "rollup --config build/rollup.config.cjs.js --bundleConfigAsCjs",
     "build:es": "rollup --config build/rollup.config.js --bundleConfigAsCjs",
-    "test": "mocha -r ts-node/register test/get*.ts",
+    "test": "mocha -r ts-node/register test/*.ts",
     "lint": "eslint --ext js,ts src test",
     "lint:fix": "eslint --fix  --ext js,ts src test",
     "prettier": "prettier src --write"
