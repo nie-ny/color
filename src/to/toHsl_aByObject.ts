@@ -17,7 +17,7 @@ export default function toHsl_aByObject(color: string = ''): IRGBA {
   const [h = 0, s = 0, l = 0] = arr;
 
   if (s === 0) {
-    r = g = b = ~(l * 255);
+    r = g = b = Math.round(l * 255 / 100);
   } else {
     const tem: Array<number> = hslToRgb(h, s, l);
     r = tem[0];

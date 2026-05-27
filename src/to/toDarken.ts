@@ -15,27 +15,28 @@ export default function toDarken(color: string, percent: number, format?: IForma
   if (percent < 0) percent = 0;
   if (percent > 100) percent = 100;
   const rgba: IRGBA = getRgbaVal(color);
-  rgba.red = Math.round(rgba.red - 2.55 * percent);
-  rgba.green = Math.round(rgba.green - 2.55 * percent);
-  rgba.blue = Math.round(rgba.blue - 2.55 * percent);
-  rgba.red = rgba.red < 0 ? 0 : rgba.red;
-  rgba.green = rgba.green < 0 ? 0 : rgba.green;
-  rgba.blue = rgba.blue < 0 ? 0 : rgba.blue;
+  const newRgba: IRGBA = { ...rgba };
+  newRgba.red = Math.round(newRgba.red - 2.55 * percent);
+  newRgba.green = Math.round(newRgba.green - 2.55 * percent);
+  newRgba.blue = Math.round(newRgba.blue - 2.55 * percent);
+  newRgba.red = newRgba.red < 0 ? 0 : newRgba.red;
+  newRgba.green = newRgba.green < 0 ? 0 : newRgba.green;
+  newRgba.blue = newRgba.blue < 0 ? 0 : newRgba.blue;
 
   // 自定义样式
-  if (format === 'hex') return rgbaToHex(rgba, false);
-  if (format === 'hexa') return rgbaToHex(rgba, true);
-  if (format === 'hsl') return rgbaToHsl(rgba, false);
-  if (format === 'hsla') return rgbaToHsl(rgba, true);
-  if (format === 'rgb') return rgbaToRgb(rgba, false);
-  if (format === 'rgba') return rgbaToRgb(rgba, true);
+  if (format === 'hex') return rgbaToHex(newRgba, false);
+  if (format === 'hexa') return rgbaToHex(newRgba, true);
+  if (format === 'hsl') return rgbaToHsl(newRgba, false);
+  if (format === 'hsla') return rgbaToHsl(newRgba, true);
+  if (format === 'rgb') return rgbaToRgb(newRgba, false);
+  if (format === 'rgba') return rgbaToRgb(newRgba, true);
   // 原有样式
-  if (rgba.format === 'hex') return rgbaToHex(rgba, false);
-  if (rgba.format === 'hexa') return rgbaToHex(rgba, true);
-  if (rgba.format === 'hsl') return rgbaToHsl(rgba, false);
-  if (rgba.format === 'hsla') return rgbaToHsl(rgba, true);
-  if (rgba.format === 'rgb') return rgbaToRgb(rgba, false);
-  if (rgba.format === 'rgba') return rgbaToRgb(rgba, true);
+  if (newRgba.format === 'hex') return rgbaToHex(newRgba, false);
+  if (newRgba.format === 'hexa') return rgbaToHex(newRgba, true);
+  if (newRgba.format === 'hsl') return rgbaToHsl(newRgba, false);
+  if (newRgba.format === 'hsla') return rgbaToHsl(newRgba, true);
+  if (newRgba.format === 'rgb') return rgbaToRgb(newRgba, false);
+  if (newRgba.format === 'rgba') return rgbaToRgb(newRgba, true);
 
   return '';
 }

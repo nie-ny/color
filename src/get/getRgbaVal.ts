@@ -16,6 +16,8 @@ export default function getRgbaVal(color: string): IRGBA {
   if (['hex', 'hexa'].includes(format)) return { ...toHex_aByObject(lowerColor), format: format };
   if (['hsl', 'hsla'].includes(format)) return { ...toHsl_aByObject(lowerColor), format: format };
   if (['rgb', 'rgba'].includes(format)) return { ...toRgb_aByObject(lowerColor), format: format };
+  if (['hsv', 'hsva'].includes(format)) return { ...toHsv_aByObject(lowerColor), format: format };
+
   // 关键字 hex格式
   return { ...toHex_aByObject(format), format: 'hex' };
 }

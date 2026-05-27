@@ -2,14 +2,13 @@
   // 编译规则 编译是使用
   "compilerOptions": {
     /* Language and Environment */
-    "target": "es2016" /* 指定ECMAScript目标版本 */,
-    "ignoreDeprecations": "6.0",
+    "target": "es2017" /* 指定ECMAScript目标版本 */,
     "moduleDetection": "auto" /* 控制使用什么方法来检测模块格式的JS文件。    */,
 
     /* Modules */
     "module": "esnext" /* 指定生成哪个模块系统代码 */,
     "esModuleInterop": true /*  允许从没有设置默认导出的模块中默认导入。这并不影响代码的输出，仅为了类型检查。 */,
-    // "forceConsistentCasingInFileNames": true /* 禁止对同一个文件的不一致的引用 */,
+    "forceConsistentCasingInFileNames": true /* 禁止对同一个文件的不一致的引用 */,
 
     /* Type Checking */
     "strict": true /* 启用所有严格类型检查选项。   */,

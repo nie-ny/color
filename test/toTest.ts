@@ -130,6 +130,9 @@ describe('toHex', function () {
   it(`toHex('rgb(112, 85, 124)')`, () => {
     assert.strictEqual(toHex('rgb(112, 85, 124)'), '#70557c');
   });
+  it(`toHex('hsv(0, 100%, 100%)')`, () => {
+    assert.strictEqual(toHex('hsv(0, 100%, 100%)'), '#ff0000');
+  });
   it(`toHex('rgba(112, 85, 124, 0.5)')`, () => {
     assert.strictEqual(toHex('rgba(112, 85, 124, 0.5)', true), '#70557c7f');
   });
@@ -282,6 +285,9 @@ describe('toComplement', function () {
 describe('toHsv', function () {
   it(`toHsv('red')`, () => {
     assert.strictEqual(toHsv('red'), 'hsv(0, 100%, 100%)');
+  });
+  it(`toHsv('hsv(0, 100%, 100%)')`, () => {
+    assert.strictEqual(toHsv('hsv(0, 100%, 100%)'), 'hsv(0, 100%, 100%)');
   });
   it(`toHsv('blue', true)`, () => {
     assert.strictEqual(toHsv('blue', true), 'hsva(240, 100%, 100%, 1)');
