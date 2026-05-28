@@ -1,4 +1,4 @@
-import type { IHSVA, IRGBA } from '../types/index';
+import type { IRGBA } from '../types/index';
 
 /**
  * 将 RGB 转换为 HSV/HSB
@@ -21,32 +21,18 @@ export default function rgbToHsv(r: number, g: number, b: number): [number, numb
 
   if (max !== min) {
     switch (max) {
-      case r: h = (g - b) / d + (g < b ? 6 : 0); break;
-      case g: h = (b - r) / d + 2; break;
-      case b: h = (r - g) / d + 4; break;
+      case r:
+        h = (g - b) / d + (g < b ? 6 : 0);
+        break;
+      case g:
+        h = (b - r) / d + 2;
+        break;
+      case b:
+        h = (r - g) / d + 4;
+        break;
     }
     h /= 6;
   }
 
-  return [
-    Math.round(h * 360),
-    Math.round(s * 100),
-    Math.round(v * 100)
-  ];
-}
-
-/**
- * 将 RGBA 对象转换为 HSVA 对象
- * @param rgba
- * @returns
- */
-export function rgbaObjectToHsva(rgba: IRGBA): IHSVA {
-  const [h, s, v] = rgbToHsv(rgba.red, rgba.green, rgba.blue);
-  return {
-    hue: h,
-    saturation: s,
-    value: v,
-    alpha: rgba.alpha,
-    format: rgba.format
-  };
+  return [Math.round(h * 360), Math.round(s * 100), Math.round(v * 100)];
 }

@@ -11,25 +11,3 @@ export interface IRGBA {
   alpha: number;
   format?: IFormat;
 }
-
-/**
- * HSLA 格式 每种颜色值的对象
- */
-export interface IHSLA {
-  hue: number;
-  saturation: number;
-  lightness: number;
-  alpha: number;
-  format?: IFormat;
-}
-
-/**
- * HSVA/HSB 格式 每种颜色值的对象
- */
-export interface IHSVA {
-  hue: number;
-  saturation: number;
-  value: number;
-  alpha: number;
-  format?: IFormat;
-}
