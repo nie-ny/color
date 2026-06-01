@@ -165,7 +165,7 @@ getGeneratePalette("rgb(23, 131, 255)", "rgb(23, 199, 111)", 12, "hex"):
 ['#1783ff', '#1789f2', '#178fe5', '#1796d8', '#179ccb', '#17a2be', '#17a8b0', '#17aea3', '#17b496', '#17bb89', '#17c17c', '#17c76f']
 ```
 
-![1.gif](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/c502b4126b864970b0d6fa71a400d351~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg6YKj5Lqb5bm05Li2bnk=:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDQ4NTYzMTYwMjU5OTQ5NSJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1780384721&x-orig-sign=jsHVOth9XMROe46LdI9vQiuYmvw%3D)
+![1.gif](https://github.com/nie-ny/color/blob/main/public/1.gif)
 
 ```js
 getGeneratePalette("rgb(23, 199, 111)", "rgb(35, 145, 255)", 8):
