@@ -27,17 +27,17 @@ import getTetradic from './get/getTetradic';
 import toRgb from './to/toRgb';
 import toHsl from './to/toHsl';
 import toHex from './to/toHex';
+import toHsv from './to/toHsv';
 import toDarken from './to/toDarken';
 import toLighten from './to/toLighten';
 import toSaturate from './to/toSaturate';
 import toDesaturate from './to/toDesaturate';
 import toRotateHue from './to/toRotateHue';
 import toInvert from './to/toInvert';
-import adjustAlpha from './to/adjustAlpha';
-import mix from './to/mix';
 import toGrayscale from './to/toGrayscale';
 import toComplement from './to/toComplement';
-import toHsv from './to/toHsv';
+import adjustAlpha from './to/adjustAlpha';
+import mix from './to/mix';
 
 export {
   isHex,
