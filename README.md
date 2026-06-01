@@ -172,7 +172,7 @@ getGeneratePalette("rgb(23, 199, 111)", "rgb(35, 145, 255)", 8):
 ['rgb(23, 199, 111)', 'rgb(25, 191, 132)', 'rgb(26, 184, 152)', 'rgb(28, 176, 173)', 'rgb(30, 168, 193)', 'rgb(32, 160, 214)', 'rgb(33, 153, 234)', 'rgb(35, 145, 255)']
 ```
 
-![2.gif](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/d37a01b005fd478195e155d7baaca603~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg6YKj5Lqb5bm05Li2bnk=:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDQ4NTYzMTYwMjU5OTQ5NSJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1780385407&x-orig-sign=4Bh%2BOe6zYAu4C7abOIGXYHhVyVs%3D)
+![2.gif](https://github.com/nie-ny/color/blob/main/public/2.gif)
 
 #### getLuminance 获取相对亮度（WCAG 2.0 标准）
 
@@ -221,9 +221,9 @@ getAnalogous("rgb(23, 199, 111)"): ['#18c918', '#17c76f', '#18c9c9']
 getAnalogous("#778899", 90): ['#769876', '#778899', '#987698']
 ```
 
-![3.gif](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/678588428f98427b8c7983c8b1401a3b~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg6YKj5Lqb5bm05Li2bnk=:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDQ4NTYzMTYwMjU5OTQ5NSJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1780386882&x-orig-sign=oZ%2Fp7144JDWZExtSyTgQWoqcxhQ%3D)
+![3.gif](https://github.com/nie-ny/color/blob/main/public/3.gif)
 
-![4.gif](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/9bdc198620c3435281b8136719828ea8~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg6YKj5Lqb5bm05Li2bnk=:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDQ4NTYzMTYwMjU5OTQ5NSJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1780386888&x-orig-sign=NeR0fkw8FZ5ndxAz3XAeiRLfuWA%3D)
+![4.gif](https://github.com/nie-ny/color/blob/main/public/4.gif)
 
 #### getMonochromatic 获取单色调色板
 
@@ -239,7 +239,7 @@ getTetradic("rgb(23, 199, 111)"): ['#17c76f', '#1818c9', '#c91870', '#c9c918']
 getTetradic("#778899", 8): ['#778899', '#987698', '#988776', '#769876']
 ```
 
-![5.gif](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/ab1b25806c984f5bb9b3d96c7690e491~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg6YKj5Lqb5bm05Li2bnk=:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDQ4NTYzMTYwMjU5OTQ5NSJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1780387470&x-orig-sign=Y9bmiEOWRHvOc%2BnVdBfBtqgmWhQ%3D)
+![5.gif](https://github.com/nie-ny/color/blob/main/public/5.gif)
 
 ##
 
@@ -283,7 +283,7 @@ toDarken("rgb(23, 199, 111)", 50): rgb(0, 72, 0)
 toDarken("hsl(120 100% 50%)", 40): hsl(120, 100%, 30%)
 ```
 
-![6.gif](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/da6d6e0e1ac84a488b7d10bdf1b8bc9e~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg6YKj5Lqb5bm05Li2bnk=:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDQ4NTYzMTYwMjU5OTQ5NSJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1780388462&x-orig-sign=MYHgI4keRo6o%2FMyNl9f7Pt%2BsEO8%3D)
+![6.gif](https://github.com/nie-ny/color/blob/main/public/6.gif)
 
 #### toLighten 颜色变亮
 
@@ -293,7 +293,7 @@ toLighten("rgb(23, 199, 111)", 50): rgb(151, 255, 239)
 toLighten("hsl(120 100% 50%)", 40): hsl(120, 100%, 70%)
 ```
 
-![7.gif](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/6d4441d78f72469a9a0147a6cec9481d~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg6YKj5Lqb5bm05Li2bnk=:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDQ4NTYzMTYwMjU5OTQ5NSJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1780388578&x-orig-sign=DV6LQ2Q2Hk08jvfIcnyPpwNNSZw%3D)
+![7.gif](https://github.com/nie-ny/color/blob/main/public/7.gif)
 
 #### toRotateHue 旋转色相
 
@@ -303,7 +303,7 @@ toRotateHue("rgb(23, 199, 111)", 50): rgb(24, 142, 201)
 toRotateHue("hsl(120 100% 50%)", 40): hsl(160, 100%, 50%)
 ```
 
-![8.gif](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/487d1840f0eb48b2a20abc0681d21587~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg6YKj5Lqb5bm05Li2bnk=:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDQ4NTYzMTYwMjU5OTQ5NSJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1780388837&x-orig-sign=5O0rWCRkCCFyPt7dR63VOkQsT0E%3D)
+![8.gif](https://github.com/nie-ny/color/blob/main/public/8.gif)
 
 #### toInvert 颜色反转
 
@@ -337,4 +337,4 @@ mix("rgb(23, 199, 111)", "rgb(0, 0, 255)"): rgb(12, 100, 183)
 mix("hsl(120 100% 50%)", "hsl(240 100% 50%)"): hsl(180, 100%, 25%)
 ```
 
-![9.gif](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/3fd436f272d44a408fe5fd018b5e3e47~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg6YKj5Lqb5bm05Li2bnk=:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDQ4NTYzMTYwMjU5OTQ5NSJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1780389245&x-orig-sign=XN4CADB1Oojdv7GSbDhoGqiSVrk%3D)
+![9.gif](https://github.com/nie-ny/color/blob/main/public/9.gif)
