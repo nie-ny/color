@@ -171,8 +171,7 @@ getGeneratePalette("rgb(23, 131, 255)", "rgb(23, 199, 111)", 12, "hex"):
 getGeneratePalette("rgb(23, 199, 111)", "rgb(35, 145, 255)", 8):
 ['rgb(23, 199, 111)', 'rgb(25, 191, 132)', 'rgb(26, 184, 152)', 'rgb(28, 176, 173)', 'rgb(30, 168, 193)', 'rgb(32, 160, 214)', 'rgb(33, 153, 234)', 'rgb(35, 145, 255)']
 ```
-
-![2.gif](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/d37a01b005fd478195e155d7baaca603~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg6YKj5Lqb5bm05Li2bnk=:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDQ4NTYzMTYwMjU5OTQ5NSJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1780385407&x-orig-sign=4Bh%2BOe6zYAu4C7abOIGXYHhVyVs%3D)
+<img src='https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/d37a01b005fd478195e155d7baaca603~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg6YKj5Lqb5bm05Li2bnk=:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDQ4NTYzMTYwMjU5OTQ5NSJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1780385407&x-orig-sign=4Bh%2BOe6zYAu4C7abOIGXYHhVyVs%3D'>
 
 #### getLuminance 获取相对亮度（WCAG 2.0 标准）
 
